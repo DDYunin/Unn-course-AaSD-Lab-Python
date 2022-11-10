@@ -11,9 +11,9 @@ class Graph:
         print('Минимальное число ребёр в графе = {0}'.format(self.vertexes - 1))
 
     # Метод добавляет ребро в граф
-    def add_edge(self, first_vertex, second_vertex, weigt):
-        if(not self.edge_is((first_vertex, second_vertex, weigt))):
-            self.graph.append((first_vertex, second_vertex, weigt))
+    def add_edge(self, first_vertex, second_vertex, weight):
+        if(not self.edge_is((first_vertex, second_vertex, weight))):
+            self.graph.append((first_vertex, second_vertex, weight))
 
     # Метод добавляет несколько ребёр в граф
     def add_edges(self, edges):
@@ -62,5 +62,5 @@ class Graph:
             print('Vertex - ({0})'.format(current_vertex))
         print('\nEdges: {0}\n'.format(len(self.graph)))
         for current_edge in self.graph:
-            print('Edge: ({0},{1}) - Weigt: {2}'.format(current_edge[0], current_edge[1], current_edge[2]))
+            print('Edge: ({0},{1}) - Weight: {2}'.format(current_edge[0], current_edge[1], current_edge[2]))
         print('\n\tInformation about graph\n')
