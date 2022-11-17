@@ -1,4 +1,4 @@
-class DisjointSet():
+class DisjointSetArray():
     # массив содержит значение какому множеству принадлежит вершина
     def __init__(self, vertexes):
         self.vertexes = vertexes
