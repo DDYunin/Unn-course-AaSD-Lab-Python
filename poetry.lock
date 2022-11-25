@@ -34,8 +34,8 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.11"
-content-hash = "2b8c5a11fda7121ce0832cc34307875f17435dd44cdb9d93d3f90c99ddef4aea"
+python-versions = "^3.10"
+content-hash = "315cfe311bac7e4070258c8a946ea94dcec7c131768ab7bb5b043a43fa8ebb26"
 
 [metadata.files]
 colorama = [
