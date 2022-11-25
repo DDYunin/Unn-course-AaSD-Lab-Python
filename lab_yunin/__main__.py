@@ -1,23 +1,17 @@
-# У нас имеется граф, тоесть нужно создать граф
-# Как его хранить? (Как он должен быть устроен?) - массив пар вершин графа + вес этого ребра (1,2,50) -
-# - (первая вершина, вторая вершина, вес ребра), причём первая вершина будет меньше второй для конкретики.
-
 from lab_yunin.my_graph import GraphLists, GraphListEdges
 from lab_yunin.my_disjoint_set import DisjointSetArray
 from lab_yunin.my_algorithms import kruskal_algorithm, prime_algorithm, prime_algorithm_2
 from lab_yunin.my_binary_heap import BinaryHeap
+
+# DEBUG
+# from my_graph import GraphLists, GraphListEdges
+# from my_disjoint_set import DisjointSetArray
+# from my_algorithms import kruskal_algorithm, prime_algorithm, prime_algorithm_2
+# from my_binary_heap import BinaryHeap
+# DEBUG
+
 from loguru import logger
 import time
-
-def main():
-    # test_graph = GraphListEdges(5)
-    # start_time = time.monotonic()
-    # # test_graph.create_edges_naive(5000*9999)
-    # print('The request creating edges lasted {0} seconds'.format(time.monotonic() - start_time))
-    # start_time = time.monotonic()
-    # kruskal_algorithm(test_graph, test_graph.vertexes)
-    # print('The kruskal algorithm lasted {0} seconds'.format(time.monotonic() - start_time))
-    pass
 
 def kruskal_work_small_graph_1():
     graph = GraphLists(9)
@@ -49,6 +43,8 @@ def kruskal_work_small_graph_2():
     graph.add_edge(3, 5, 9)
     graph.add_edge(4, 5, 10)
     kruskal_algorithm(graph, graph.vertexes)
+
+
 
 def prime_work_small_graph_1():
     graph = GraphLists(9)
@@ -99,6 +95,19 @@ def prime_work_small_graph_2():
     graph.add_edge(4, 5, 10)
     prime_algorithm(graph, graph.vertexes)
 
+def prime_work_small_graph_2_2():
+    graph = GraphListEdges(6)
+    graph.add_edge(0, 1, 7)
+    graph.add_edge(0, 2, 8)
+    graph.add_edge(1, 2, 11)
+    graph.add_edge(1, 3, 2)
+    graph.add_edge(2, 3, 6)
+    graph.add_edge(2, 4, 9)
+    graph.add_edge(3, 4, 11)
+    graph.add_edge(3, 5, 9)
+    graph.add_edge(4, 5, 10)
+    prime_algorithm_2(graph, graph.vertexes)
+
 def prime_work_large_graph():
     test_graph = GraphLists(10000)
     start_time = time.monotonic()
@@ -132,7 +141,7 @@ def kruskal_work_large_graph():
 
 
 if __name__ == '__main__':
-    # kruskal_work_small_graph_1()
+    kruskal_work_small_graph_1()
     prime_work_small_graph_1()
     prime_work_small_graph_1_2()
     # kruskal_work_small_graph_2()
