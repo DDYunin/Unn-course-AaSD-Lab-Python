@@ -60,9 +60,9 @@ class BinaryHeap():
     def draw_heap(self):
         index_current_node = 0
         index_left_child = 1
-        while (index_current_node < self.size):
-            while((index_current_node < index_left_child) and (index_current_node < self.size)):
-                print(self.storage[index_current_node], end="\t")
+        while (index_current_node < self.heap_size):
+            while((index_current_node < index_left_child) and (index_current_node < self.heap_size)):
+                print(self.heap_list[index_current_node], end="\t")
                 index_current_node += 1
             print()
             index_left_child = index_left_child * 2 + 1
